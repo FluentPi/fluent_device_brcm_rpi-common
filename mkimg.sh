@@ -1,8 +1,8 @@
 #/bin/bash
 
-LINEAGEVERSION=lineage-14.1
+LINEAGEVERSION=FluentOS-1.0
 DATE=`date +%Y%m%d`
-IMGNAME=$LINEAGEVERSION-$DATE-rpi3.img
+IMGNAME=$LINEAGEVERSION-$DATE-rpi-common.img
 IMGSIZE=4
 
 if [ `id -u` != 0 ]; then
