@@ -28,7 +28,7 @@ $(call inherit-product, device/brcm/rpi/rpi.mk)
 
 PRODUCT_NAME := fluent_rpi
 PRODUCT_RELEASE_NAME := Raspberry Pi (2-3b-3b+)
-PRODUCT_DEVICE := rpi3
+PRODUCT_DEVICE := rpi
 PRODUCT_BRAND := Broadcom
 PRODUCT_MANUFACTURER := Element14
 PRODUCT_MODEL := Raspberry Pi
