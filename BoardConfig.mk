@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/brcm/rpi3-common
+LOCAL_PATH := device/brcm/rpi
 
 # Platform
 TARGET_NO_BOOTLOADER := true
@@ -58,7 +58,7 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/brcm/rpi3-common/sepolicy
+BOARD_SEPOLICY_DIRS += device/brcm/rpi/sepolicy
 
 # Wifi
 BOARD_WLAN_DEVICE := bcmdhd

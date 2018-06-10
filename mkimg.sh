@@ -59,10 +59,10 @@ else
 	mount /dev/mapper/loop0p1 sdcard/boot
 	sync
 	cp boot/* sdcard/boot
-	cp ../../../vendor/brcm/rpi3/proprietary/boot/* sdcard/boot
-	cp ../../../out/target/product/rpi3/obj/KERNEL_OBJ/arch/arm/boot/zImage sdcard/boot
-	cp -R ../../../out/target/product/rpi3/obj/KERNEL_OBJ/arch/arm/boot/dts/* sdcard/boot
-	cp ../../../out/target/product/rpi3/ramdisk.img sdcard/boot
+	cp ../../../vendor/brcm/rpi/proprietary/boot/* sdcard/boot
+	cp ../../../out/target/product/rpi/obj/KERNEL_OBJ/arch/arm/boot/zImage sdcard/boot
+	cp -R ../../../out/target/product/rpi/obj/KERNEL_OBJ/arch/arm/boot/dts/* sdcard/boot
+	cp ../../../out/target/product/rpi/ramdisk.img sdcard/boot
 	sync
 	umount /dev/mapper/loop0p1
 	rm -rf sdcard

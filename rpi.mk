@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS += device/brcm/rpi3-common/overlay
+DEVICE_PACKAGE_OVERLAYS += device/brcm/rpi/overlay
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
@@ -66,11 +66,11 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/brcm/rpi3-common/ramdisk,root)
+    $(call find-copy-subdir-files,*,device/brcm/rpi/ramdisk,root)
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/brcm/rpi3-common/prebuilt/system,system)
+    $(call find-copy-subdir-files,*,device/brcm/rpi/prebuilt/system,system)
 
 # Media codecs
 PRODUCT_COPY_FILES += \

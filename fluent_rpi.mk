@@ -21,12 +21,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from those products. Mirror feature here.
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_mirror.mk)
 
-$(call inherit-product, device/brcm/rpi3-common/rpi3.mk)
+$(call inherit-product, device/brcm/rpi/rpi.mk)
 
 # Enhanced NFC
 #$(call inherit-product, vendor/fluent/config/nfc_enhanced.mk)
 
-PRODUCT_NAME := fluent_rpi3
+PRODUCT_NAME := fluent_rpi
 PRODUCT_RELEASE_NAME := Raspberry Pi (2-3b-3b+)
 PRODUCT_DEVICE := rpi3
 PRODUCT_BRAND := Broadcom

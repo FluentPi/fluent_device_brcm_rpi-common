@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/fluent_rpi3.mk
+	$(LOCAL_DIR)/fluent_rpi.mk
