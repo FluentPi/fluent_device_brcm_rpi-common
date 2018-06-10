@@ -1,1 +1,1 @@
-add_lunch_combo fluent_rpi3-common-userdebug
+add_lunch_combo fluent_rpi3-userdebug
