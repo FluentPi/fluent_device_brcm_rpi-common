@@ -1,8 +1,8 @@
 #/bin/bash
 
-LINEAGEVERSION=FluentOS-1.0
+ROMNAME=FluentOS-1.0
 DATE=`date +%Y%m%d`
-IMGNAME=$LINEAGEVERSION-$DATE-rpi-common.img
+IMGNAME=$ROMNAME-$DATE-rpi.img
 IMGSIZE=4
 
 if [ `id -u` != 0 ]; then
@@ -52,7 +52,7 @@ else
 	mkfs.fat -F 32 /dev/mapper/loop0p1
 	mkfs.ext4 /dev/mapper/loop0p3
 	echo "Copying system..."
-	dd if=../../../out/target/product/rpi3/system.img of=/dev/mapper/loop0p2 bs=1M
+	dd if=../../../out/target/product/rpi/system.img of=/dev/mapper/loop0p2 bs=1M
 	echo "Copying boot..."
 	mkdir -p sdcard/boot
 	sync
