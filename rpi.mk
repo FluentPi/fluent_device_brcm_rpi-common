@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS += device/brcm/rpi3/overlay
+DEVICE_PACKAGE_OVERLAYS += device/brcm/rpi/overlay
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
-$(call inherit-product, vendor/brcm/rpi3/rpi3-vendor.mk)
+$(call inherit-product, vendor/brcm/rpi/rpi-vendor.mk)
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := mdpi
@@ -31,7 +31,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
     audio.a2dp.default \
-    audio.primary.rpi3 \
+    audio.primary.rpi \
     audio.r_submix.default \
     audio.usb.default
 
@@ -56,7 +56,7 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
-    gps.rpi3
+    gps.rpi
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -71,9 +71,9 @@ PRODUCT_PACKAGES += \
     libGLESv1_CM_swiftshader \
     libGLESv2_swiftshader \
     libyuv \
-    memtrack.rpi3
-#    gralloc.rpi3 \
-#    hwcomposer.rpi3 \
+    memtrack.rpi
+#    gralloc.rpi \
+#    hwcomposer.rpi \
 #    libGLES_mesa
 
 # I2C
@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.rpi3
+    android.hardware.light@2.0-service.rpi
 
 # Power
 PRODUCT_PACKAGES += \
@@ -111,11 +111,11 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/brcm/rpi3/ramdisk,root)
+    $(call find-copy-subdir-files,*,device/brcm/rpi/ramdisk,root)
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/brcm/rpi3/prebuilt/vendor,vendor)
+    $(call find-copy-subdir-files,*,device/brcm/rpi/prebuilt/vendor,vendor)
 
 # Media codecs
 PRODUCT_COPY_FILES += \

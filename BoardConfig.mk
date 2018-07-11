@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The FluentOS ROM Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/brcm/rpi3
+LOCAL_PATH := device/brcm/rpi
 
 # Platform
 TARGET_NO_BOOTLOADER := true
@@ -30,15 +30,15 @@ TARGET_CPU_VARIANT := cortex-a53
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := zImage
-TARGET_KERNEL_CONFIG := lineageos_rpi3_defconfig
-TARGET_KERNEL_SOURCE := kernel/brcm/rpi3
+TARGET_KERNEL_CONFIG := fluentcore_rpi_defconfig
+TARGET_KERNEL_SOURCE := kernel/brcm/rpi
 
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
-BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/vnd_rpi3.txt
+BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/vnd_rpi.txt
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
@@ -62,7 +62,7 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/brcm/rpi3/sepolicy
+BOARD_SEPOLICY_DIRS += device/brcm/rpi/sepolicy
 
 # Wifi
 BOARD_WLAN_DEVICE := bcmdhd

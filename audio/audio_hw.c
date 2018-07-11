@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "audio_hw_rpi3"
+#define LOG_TAG "audio_hw_rpi"
 //#define LOG_NDEBUG 0
 
 #include <errno.h>

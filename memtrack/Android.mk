@@ -25,6 +25,6 @@ LOCAL_CFLAGS := -Wconversion -Wall -Werror -Wno-sign-conversion
 LOCAL_CLANG  := true
 LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_SRC_FILES := memtrack.c
-LOCAL_MODULE := memtrack.rpi3
+LOCAL_MODULE := memtrack.rpi
 #LOCAL_MODULE := memtrack.$(TARGET_BOARD_PLATFORM)
 include $(BUILD_SHARED_LIBRARY)

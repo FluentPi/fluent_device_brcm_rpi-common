@@ -22,7 +22,7 @@ LOCAL_PATH := $(call my-dir)
 # required type is 'primary'. Other possibilites are 'a2dp', 'usb', etc.
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := audio.primary.rpi3
+LOCAL_MODULE := audio.primary.rpi
 LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SRC_FILES := audio_hw.c
