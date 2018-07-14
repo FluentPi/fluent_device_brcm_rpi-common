@@ -30,7 +30,7 @@ TARGET_CPU_VARIANT := cortex-a53
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := zImage
-TARGET_KERNEL_CONFIG := fluentcore_rpi_defconfig
+TARGET_KERNEL_CONFIG := lineageos_rpi3_defconfig
 TARGET_KERNEL_SOURCE := kernel/brcm/rpi
 
 # Audio
