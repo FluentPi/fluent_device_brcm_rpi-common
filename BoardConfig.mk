@@ -37,7 +37,7 @@ TARGET_KERNEL_SOURCE := kernel/brcm/rpi
 USE_XML_AUDIO_POLICY_CONF := 1
 
 #Generic Camera Value
-USE_CAMERA_STUB := false
+USE_CAMERA_STUB := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
