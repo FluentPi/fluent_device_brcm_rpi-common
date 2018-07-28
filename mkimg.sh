@@ -54,8 +54,8 @@ else
 	kpartx -a $IMGNAME
 	sync
 	sleep 5
-	mkfs.fat -m 0 -F -E /dev/mapper/loop0p1
-	mkfs.ext4 -m 0 -F -E lazy_itable_init=0,lazy_journal_init=0,discard /dev/mapper/loop0p4
+	dd if=fat-boot/boot.fat of=/dev/mapper/loop0p1
+	mkfs.ext4 /dev/mapper/loop0p4
 	resize2fs /dev/mapper/loop0p4 687868
 	echo "Copying system..."
 	dd if=../../../out/target/product/rpi/system.img of=/dev/mapper/loop0p2 bs=1M
@@ -64,7 +64,7 @@ else
 	echo "Copying boot..."
 	mkdir -p sdcard/boot
 	sync
-	sudo mount -o discard,defaults /dev/mapper/loop0p1 sdcard/boot
+	mount /dev/mapper/loop0p1 sdcard/boot
 	sync
 	cp boot/* sdcard/boot
 	cp ../../../vendor/brcm/rpi/proprietary/boot/* sdcard/boot
