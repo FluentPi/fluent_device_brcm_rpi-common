@@ -14,7 +14,7 @@ if [ -f $IMGNAME ]; then
 	echo "File $IMGNAME already exists!"
 else
 	echo "Creating image file $IMGNAME..."
-	dd if=/dev/zero of=$IMGNAME bs=512k count=$(echo "$IMGSIZE*1024*2" | bc)
+	dd if=/dev/zero of=$IMGNAME bs=512k count=8142
 	sync
 	echo "Creating partitions..."
 	kpartx -a $IMGNAME
@@ -25,17 +25,17 @@ else
 	echo p
 	echo 1
 	echo
-	echo +128M
+	echo +128
 	echo n
 	echo p
 	echo 2
 	echo
-	echo +1024M
+	echo +1024
 	echo n
 	echo p
 	echo 3
 	echo
-	echo +256M
+	echo +256
 	echo n
 	echo p
 	echo 4
@@ -54,8 +54,8 @@ else
 	kpartx -a $IMGNAME
 	sync
 	sleep 5
-	mkfs.fat -F 32 /dev/mapper/loop0p1
-	mkfs.ext4 /dev/mapper/loop0p4
+	mkfs.fat -m 0 -F -E /dev/mapper/loop0p1
+	mkfs.ext4 -m 0 -F -E lazy_itable_init=0,lazy_journal_init=0,discard /dev/mapper/loop0p4
 	resize2fs /dev/mapper/loop0p4 687868
 	echo "Copying system..."
 	dd if=../../../out/target/product/rpi/system.img of=/dev/mapper/loop0p2 bs=1M
@@ -64,7 +64,7 @@ else
 	echo "Copying boot..."
 	mkdir -p sdcard/boot
 	sync
-	mount /dev/mapper/loop0p1 sdcard/boot
+	sudo mount -o discard,defaults /dev/mapper/loop0p1 sdcard/boot
 	sync
 	cp boot/* sdcard/boot
 	cp ../../../vendor/brcm/rpi/proprietary/boot/* sdcard/boot
