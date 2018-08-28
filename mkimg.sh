@@ -4,7 +4,7 @@ ROMNAME=FluentOS-2.0-IC
 DATE=`date +%Y%m%d`
 IMGNAME=$ROMNAME-$DATE-rpi.img
 IMGSIZE=4
-OUTDIR=${ANDROID_PRODUCT_OUT:="../../../out/target/product/rpi3"}
+OUTDIR=${ANDROID_PRODUCT_OUT:="../../../out/target/product/rpi"}
 
 if [ `id -u` != 0 ]; then
 	echo "Must be root to run script!"
