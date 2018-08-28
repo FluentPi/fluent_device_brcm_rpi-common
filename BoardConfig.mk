@@ -36,6 +36,9 @@ TARGET_KERNEL_SOURCE := kernel/brcm/rpi
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
+# Binder
+TARGET_USES_64_BIT_BINDER := true
+
 #Generic Camera Value
 USE_CAMERA_STUB := true
 
