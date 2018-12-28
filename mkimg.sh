@@ -4,7 +4,7 @@ FLUENT=FluentOS-2.0
 DATE=`date +%Y%m%d`
 IMGNAME=$FLUENT-$DATE-rpi3.img
 IMGSIZE=4
-OUTDIR=${ANDROID_PRODUCT_OUT:="../../../out/target/product/rpi3"}
+OUTDIR=${ANDROID_PRODUCT_OUT:="../../../out/target/product/rpi"}
 
 if [ `id -u` != 0 ]; then
 	echo "Must be root to run script!"
