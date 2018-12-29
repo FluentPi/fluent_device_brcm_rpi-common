@@ -69,7 +69,7 @@ else
 	mount /dev/mapper/${LOOPDEV}p1 sdcard/boot
 	sync
 	cp boot/* sdcard/boot
-	cp ../../../vendor/brcm/rpi3/proprietary/boot/* sdcard/boot
+	cp ../../../vendor/brcm/rpi/proprietary/boot/* sdcard/boot
 	cp $OUTDIR/obj/KERNEL_OBJ/arch/arm/boot/zImage sdcard/boot
 	cp -R $OUTDIR/obj/KERNEL_OBJ/arch/arm/boot/dts/* sdcard/boot
 	cp $OUTDIR/ramdisk.img sdcard/boot
