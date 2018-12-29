@@ -20,13 +20,10 @@ TARGET_SCREEN_WIDTH := 1280
 TARGET_SCREEN_HEIGHT := 720
 
 # Inherit some common FluentOS stuff.
-$(call inherit-product, vendor/fluent/config/common_tablet.mk)
+$(call inherit-product, vendor/fluent/common-pi-mirror.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/brcm/rpi/rpi.mk)
-
-# Su
-WITH_SU := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rpi
@@ -35,9 +32,3 @@ PRODUCT_BRAND := Raspberry
 PRODUCT_MODEL := Raspberry Pi
 PRODUCT_MANUFACTURER := Raspberry
 PRODUCT_RELEASE_NAME := Raspberry Pi 3
-
-
-TARGET_VENDOR_PRODUCT_NAME := rpi
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.carbon.maintainer="ROM-PacMe"
